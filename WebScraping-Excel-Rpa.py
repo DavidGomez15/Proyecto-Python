@@ -13,7 +13,7 @@ from email import encoders
 
 
 # Definir la carpeta que se usara
-os.chdir (r"C:\Users\David\Desktop\Proyecto-Python-Final")
+os.chdir (r"C:\Users\Danie\OneDrive\Desktop\Proyecto-Python")
 
 # url de donde se sacaran los datos
 main_url = "https://listado.mercadolibre.com.co/"
@@ -81,7 +81,7 @@ if response.status_code == 200:
 
         fila += 1 #Se hace un contador para que vaya pasando de fila y se vaya almacenando
 
-        #Ajustamos el alto de las filas
+        #Ajustamos el alto de todas las filas
         for i in range(2, fila):
             hoja.row_dimensions[i].height = 30
 
@@ -98,7 +98,6 @@ else:
 
 ##  Mensaje del correo electronico
 mensaje = MIMEMultipart()
-print("\n****************************")
 cuerpo_mensaje = input("Ingrese el mensaje que contendra el correo: ")
 
 # datos para envar el correo
